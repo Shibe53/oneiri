@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://boo5npf40h10q"]
+
+[ext_resource type="PackedScene" uid="uid://dm81jioko0hej" path="res://Scenes/interactable.tscn" id="1_ufb5h"]
+
+[node name="Object" type="StaticBody2D"]
+
+[node name="Interactable" parent="." instance=ExtResource("1_ufb5h")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://0etiwbu1by2e"]
+
+[ext_resource type="PackedScene" uid="uid://dm81jioko0hej" path="res://Scenes/interactable.tscn" id="1_2bj67"]
+
+[node name="Walls" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Interactable" parent="." instance=ExtResource("1_2bj67")]
+DIALOGUE = Array[String](["Nothing here. Just a wall."])
+
+[node name="CollisionShape2D" parent="Interactable" index="0"]
+shape = null
+
+[editable path="Interactable"]

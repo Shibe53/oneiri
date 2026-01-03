@@ -1,0 +1,135 @@
+[gd_scene load_steps=5 format=3 uid="uid://d271l8xy3g4hs"]
+
+[ext_resource type="PackedScene" uid="uid://bgthhgk1tsuie" path="res://Scenes/player.tscn" id="1_a588d"]
+[ext_resource type="PackedScene" uid="uid://0etiwbu1by2e" path="res://Scenes/walls.tscn" id="2_ox6ny"]
+[ext_resource type="PackedScene" uid="uid://d1kfl7d37vecn" path="res://Scenes/door.tscn" id="3_37qvf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ox6ny"]
+size = Vector2(10, 89.5)
+
+[node name="Asiyah" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_a588d")]
+position = Vector2(327, 526)
+rotation = 3.1415927
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1153.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+
+[node name="Walls" parent="." instance=ExtResource("2_ox6ny")]
+position = Vector2(292, 501)
+
+[node name="CollisionShape2D" parent="Walls" index="0"]
+shape = SubResource("RectangleShape2D_ox6ny")
+
+[node name="Interactable" parent="Walls" index="1"]
+DIALOGUE = Array[String]([])
+
+[node name="Walls3" parent="." instance=ExtResource("2_ox6ny")]
+position = Vector2(371, 501)
+
+[node name="CollisionShape2D" parent="Walls3" index="0"]
+shape = SubResource("RectangleShape2D_ox6ny")
+
+[node name="Interactable" parent="Walls3" index="1"]
+DIALOGUE = Array[String]([])
+
+[node name="Walls4" parent="." instance=ExtResource("2_ox6ny")]
+position = Vector2(371, 412)
+
+[node name="CollisionShape2D" parent="Walls4" index="0"]
+shape = SubResource("RectangleShape2D_ox6ny")
+
+[node name="Interactable" parent="Walls4" index="1"]
+DIALOGUE = Array[String]([])
+
+[node name="Walls5" parent="." instance=ExtResource("2_ox6ny")]
+position = Vector2(292, 412)
+
+[node name="CollisionShape2D" parent="Walls5" index="0"]
+shape = SubResource("RectangleShape2D_ox6ny")
+
+[node name="Interactable" parent="Walls5" index="1"]
+DIALOGUE = Array[String]([])
+
+[node name="Walls6" parent="." instance=ExtResource("2_ox6ny")]
+position = Vector2(292, 323)
+
+[node name="CollisionShape2D" parent="Walls6" index="0"]
+shape = SubResource("RectangleShape2D_ox6ny")
+
+[node name="Interactable" parent="Walls6" index="1"]
+DIALOGUE = Array[String]([])
+
+[node name="Walls7" parent="." instance=ExtResource("2_ox6ny")]
+position = Vector2(371, 323)
+
+[node name="CollisionShape2D" parent="Walls7" index="0"]
+shape = SubResource("RectangleShape2D_ox6ny")
+
+[node name="Interactable" parent="Walls7" index="1"]
+DIALOGUE = Array[String]([])
+
+[node name="Walls8" parent="." instance=ExtResource("2_ox6ny")]
+position = Vector2(411, 273)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" parent="Walls8" index="0"]
+shape = SubResource("RectangleShape2D_ox6ny")
+
+[node name="Interactable" parent="Walls8" index="1"]
+DIALOGUE = Array[String]([])
+
+[node name="Walls9" parent="." instance=ExtResource("2_ox6ny")]
+position = Vector2(252, 273)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" parent="Walls9" index="0"]
+shape = SubResource("RectangleShape2D_ox6ny")
+
+[node name="Interactable" parent="Walls9" index="1"]
+DIALOGUE = Array[String]([])
+
+[node name="Walls2" parent="." instance=ExtResource("2_ox6ny")]
+position = Vector2(332, 550)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" parent="Walls2" index="0"]
+shape = SubResource("RectangleShape2D_ox6ny")
+
+[node name="Interactable" parent="Walls2" index="1"]
+DIALOGUE = Array[String]([])
+
+[node name="Door" parent="." instance=ExtResource("3_37qvf")]
+position = Vector2(297, 441)
+
+[node name="Interactable" parent="Door" index="0"]
+DIALOGUE = Array[String](["Leave me alone smh", "No seriously Jeremy leave"])
+TYPE = 1
+
+[node name="Door2" parent="." instance=ExtResource("3_37qvf")]
+position = Vector2(366, 321)
+
+[editable path="Walls"]
+[editable path="Walls/Interactable"]
+[editable path="Walls3"]
+[editable path="Walls3/Interactable"]
+[editable path="Walls4"]
+[editable path="Walls4/Interactable"]
+[editable path="Walls5"]
+[editable path="Walls5/Interactable"]
+[editable path="Walls6"]
+[editable path="Walls6/Interactable"]
+[editable path="Walls7"]
+[editable path="Walls7/Interactable"]
+[editable path="Walls8"]
+[editable path="Walls8/Interactable"]
+[editable path="Walls9"]
+[editable path="Walls9/Interactable"]
+[editable path="Walls2"]
+[editable path="Walls2/Interactable"]
+[editable path="Door"]
+[editable path="Door2"]

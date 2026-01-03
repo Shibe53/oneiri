@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm81jioko0hej"]
+
+[ext_resource type="Script" uid="uid://1y2bsocqd6w0" path="res://Scripts/interactable.gd" id="1_8s6bd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8s6bd"]
+size = Vector2(20, 30)
+
+[node name="Interactable" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_8s6bd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8s6bd")
