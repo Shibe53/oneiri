@@ -1,23 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://d271l8xy3g4hs"]
+[gd_scene load_steps=7 format=3 uid="uid://d271l8xy3g4hs"]
 
 [ext_resource type="PackedScene" uid="uid://bgthhgk1tsuie" path="res://Scenes/player.tscn" id="1_a588d"]
+[ext_resource type="Script" uid="uid://gqdd15ja03aw" path="res://Scripts/world.gd" id="1_ecdnk"]
 [ext_resource type="PackedScene" uid="uid://0etiwbu1by2e" path="res://Scenes/walls.tscn" id="2_ox6ny"]
 [ext_resource type="PackedScene" uid="uid://d1kfl7d37vecn" path="res://Scenes/door.tscn" id="3_37qvf"]
+[ext_resource type="Texture2D" uid="uid://cuyasbq1f32ys" path="res://Assets/compass.png" id="4_hh0lw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox6ny"]
 size = Vector2(10, 89.5)
 
 [node name="Asiyah" type="Node2D"]
+script = ExtResource("1_ecdnk")
+player = NodePath("Player")
 
 [node name="Player" parent="." instance=ExtResource("1_a588d")]
 position = Vector2(327, 526)
-rotation = 3.1415927
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_right = 1153.0
-offset_bottom = 651.0
-color = Color(0, 0, 0, 1)
 
 [node name="Walls" parent="." instance=ExtResource("2_ox6ny")]
 position = Vector2(292, 501)
@@ -112,6 +109,25 @@ TYPE = 1
 
 [node name="Door2" parent="." instance=ExtResource("3_37qvf")]
 position = Vector2(366, 321)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Black" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1153.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+
+[node name="Compass" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -188.0
+offset_right = 190.0
+offset_bottom = -28.0
+grow_vertical = 0
+pivot_offset = Vector2(77.5, 77.5)
+texture = ExtResource("4_hh0lw")
 
 [editable path="Walls"]
 [editable path="Walls/Interactable"]

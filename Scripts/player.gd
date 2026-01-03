@@ -58,7 +58,7 @@ func move_state(delta, speed):
 	
 	var move_vector = input_vector.y * forward + input_vector.x * right
 	
-	move_and_collide(move_vector * speed * delta)
+	move_and_collide(-move_vector * speed * delta)
 
 func talk_state(area):
 	var dialog = area.on_interact()
