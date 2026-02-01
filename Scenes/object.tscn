@@ -3,7 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://dm81jioko0hej" path="res://Scenes/interactable.tscn" id="1_ufb5h"]
 
 [node name="Object" type="StaticBody2D"]
+collision_layer = 8
 
 [node name="Interactable" parent="." instance=ExtResource("1_ufb5h")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[editable path="Interactable"]

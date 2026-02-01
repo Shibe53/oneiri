@@ -1,7 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1kfl7d37vecn"]
+[gd_scene load_steps=4 format=3 uid="uid://d1kfl7d37vecn"]
 
 [ext_resource type="PackedScene" uid="uid://dm81jioko0hej" path="res://Scenes/interactable.tscn" id="1_w6aom"]
+[ext_resource type="AudioStream" uid="uid://c5nfa2wfif0vp" path="res://Assets/knock.wav" id="2_p0e35"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6aom"]
+size = Vector2(20, 40)
 
 [node name="Door" type="Node2D"]
 
 [node name="Interactable" parent="." instance=ExtResource("1_w6aom")]
+
+[node name="CollisionShape2D" parent="Interactable" index="0"]
+shape = SubResource("RectangleShape2D_w6aom")
+
+[node name="Sound" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sound"]
+
+[node name="Knock" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_p0e35")
+volume_db = 3.029
+pitch_scale = 0.8
+
+[editable path="Interactable"]

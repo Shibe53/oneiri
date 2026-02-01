@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Oneiri"
-run/main_scene="uid://d271l8xy3g4hs"
+run/main_scene="uid://bi7e1h76n1l71"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/show_image=false
 boot_splash/fullsize=false
@@ -68,6 +68,7 @@ interact={
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Interact"
 2d_physics/layer_3="Walls"
+2d_physics/layer_4="Objects"
 
 [rendering]
 

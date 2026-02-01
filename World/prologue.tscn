@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://bi7e1h76n1l71"]
+
+[ext_resource type="Script" uid="uid://gqdd15ja03aw" path="res://Scripts/world.gd" id="1_1s503"]
+[ext_resource type="Texture2D" uid="uid://cuyasbq1f32ys" path="res://Assets/compass.png" id="6_hsiah"]
+[ext_resource type="FontFile" uid="uid://cogmjy2mx472y" path="res://Assets/VCR_OSD_MONO_1.001.ttf" id="7_7cdes"]
+[ext_resource type="PackedScene" uid="uid://tsp1hveejb5d" path="res://Scenes/dialogue.tscn" id="8_120uo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ecdnk"]
+font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_soyae"]
+font = ExtResource("7_7cdes")
+font_size = 32
+
+[node name="Prologue" type="Node2D"]
+script = ExtResource("1_1s503")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Black" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 1153.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+
+[node name="Compass" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -188.0
+offset_right = 190.0
+offset_bottom = -28.0
+grow_vertical = 0
+pivot_offset = Vector2(77.5, 77.5)
+texture = ExtResource("6_hsiah")
+
+[node name="HintLabel" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -25.0
+offset_right = 83.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(83, 25)
+text = "MIMOMU"
+label_settings = SubResource("LabelSettings_ecdnk")
+
+[node name="DialogueLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -15.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0.5, 14.5)
+label_settings = SubResource("LabelSettings_soyae")
+
+[node name="Dialogue" parent="." instance=ExtResource("8_120uo")]
+labelPath = NodePath("../CanvasLayer/DialogueLabel")

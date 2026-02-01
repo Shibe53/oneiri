@@ -1,13 +1,13 @@
-[gd_scene load_steps=26 format=3 uid="uid://d271l8xy3g4hs"]
+[gd_scene load_steps=26 format=3 uid="uid://ber8sfvdfvm30"]
 
-[ext_resource type="PackedScene" uid="uid://bgthhgk1tsuie" path="res://Scenes/player.tscn" id="1_a588d"]
-[ext_resource type="Script" uid="uid://gqdd15ja03aw" path="res://Scripts/world.gd" id="1_ecdnk"]
-[ext_resource type="PackedScene" uid="uid://0etiwbu1by2e" path="res://Scenes/walls.tscn" id="2_ox6ny"]
-[ext_resource type="PackedScene" uid="uid://d1kfl7d37vecn" path="res://Scenes/door.tscn" id="3_37qvf"]
-[ext_resource type="Texture2D" uid="uid://cuyasbq1f32ys" path="res://Assets/compass.png" id="4_hh0lw"]
-[ext_resource type="PackedScene" uid="uid://boo5npf40h10q" path="res://Scenes/object.tscn" id="5_5x5jl"]
-[ext_resource type="FontFile" uid="uid://cogmjy2mx472y" path="res://Assets/VCR_OSD_MONO_1.001.ttf" id="7_hbv11"]
-[ext_resource type="PackedScene" uid="uid://tsp1hveejb5d" path="res://Scenes/dialogue.tscn" id="8_soyae"]
+[ext_resource type="Script" uid="uid://gqdd15ja03aw" path="res://Scripts/world.gd" id="1_eikky"]
+[ext_resource type="PackedScene" uid="uid://bgthhgk1tsuie" path="res://Scenes/player.tscn" id="2_3sfnp"]
+[ext_resource type="PackedScene" uid="uid://0etiwbu1by2e" path="res://Scenes/walls.tscn" id="3_s8qm7"]
+[ext_resource type="PackedScene" uid="uid://d1kfl7d37vecn" path="res://Scenes/door.tscn" id="4_v0cdt"]
+[ext_resource type="PackedScene" uid="uid://boo5npf40h10q" path="res://Scenes/object.tscn" id="5_j4m2s"]
+[ext_resource type="Texture2D" uid="uid://cuyasbq1f32ys" path="res://Assets/compass.png" id="6_tyw8b"]
+[ext_resource type="FontFile" uid="uid://cogmjy2mx472y" path="res://Assets/VCR_OSD_MONO_1.001.ttf" id="7_c8pyn"]
+[ext_resource type="PackedScene" uid="uid://tsp1hveejb5d" path="res://Scenes/dialogue.tscn" id="8_3ek8a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox6ny"]
 size = Vector2(10, 89.5)
@@ -57,17 +57,17 @@ size = Vector2(20, 23.333313)
 font_size = 36
 
 [sub_resource type="LabelSettings" id="LabelSettings_soyae"]
-font = ExtResource("7_hbv11")
+font = ExtResource("7_c8pyn")
 font_size = 32
 
-[node name="Asiyah" type="Node2D"]
-script = ExtResource("1_ecdnk")
+[node name="Yetzirah" type="Node2D"]
+script = ExtResource("1_eikky")
 player = NodePath("Player")
 
-[node name="Player" parent="." instance=ExtResource("1_a588d")]
+[node name="Player" parent="." instance=ExtResource("2_3sfnp")]
 position = Vector2(327, 586)
 
-[node name="Walls" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(292, 561)
 
 [node name="CollisionShape2D" parent="Walls" index="0"]
@@ -76,7 +76,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls3" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls3" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(371, 561)
 
 [node name="CollisionShape2D" parent="Walls3" index="0"]
@@ -85,7 +85,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls3" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls4" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls4" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(371, 472)
 
 [node name="CollisionShape2D" parent="Walls4" index="0"]
@@ -94,7 +94,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls4" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls5" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls5" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(292, 472)
 
 [node name="CollisionShape2D" parent="Walls5" index="0"]
@@ -103,7 +103,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls5" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls6" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls6" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(292, 383)
 
 [node name="CollisionShape2D" parent="Walls6" index="0"]
@@ -112,7 +112,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls6" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls7" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls7" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(371, 383)
 
 [node name="CollisionShape2D" parent="Walls7" index="0"]
@@ -121,7 +121,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls7" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls8" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls8" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(411, 333)
 rotation = 1.5707964
 
@@ -131,7 +131,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls8" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls13" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls13" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(501, 333)
 rotation = 1.5707964
 
@@ -141,7 +141,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls13" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls14" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls14" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(551, 293)
 
 [node name="CollisionShape2D" parent="Walls14" index="0"]
@@ -150,7 +150,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls14" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls15" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls15" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(551, 224)
 
 [node name="CollisionShape2D" parent="Walls15" index="0"]
@@ -159,7 +159,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls15" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls9" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls9" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(252, 333)
 rotation = 1.5707964
 
@@ -169,7 +169,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls9" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls10" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls10" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(162, 333)
 rotation = 1.5707964
 
@@ -179,7 +179,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls10" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls11" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls11" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(112, 293)
 
 [node name="CollisionShape2D" parent="Walls11" index="0"]
@@ -188,7 +188,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls11" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls46" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls46" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(180, 232)
 
 [node name="CollisionShape2D" parent="Walls46" index="0"]
@@ -197,7 +197,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls46" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls51" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls51" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(230, 272)
 rotation = 1.5707964
 
@@ -207,7 +207,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls51" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls52" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls52" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(320, 272)
 rotation = 1.5707964
 
@@ -217,7 +217,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls52" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls53" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls53" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(409, 272)
 rotation = 1.5707964
 
@@ -227,41 +227,41 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls53" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Door" parent="Walls53" instance=ExtResource("3_37qvf")]
+[node name="Door" parent="Walls53" instance=ExtResource("4_v0cdt")]
 position = Vector2(-33.999985, 292)
 rotation = 1.5707964
 
 [node name="Interactable" parent="Walls53/Door" index="0"]
 TYPE = 2
 
-[node name="Door2" parent="Walls53" instance=ExtResource("3_37qvf")]
+[node name="Door2" parent="Walls53" instance=ExtResource("4_v0cdt")]
 position = Vector2(-203, 98)
 
 [node name="Interactable" parent="Walls53/Door2" index="0"]
 TYPE = 3
 
-[node name="Door3" parent="Walls53" instance=ExtResource("3_37qvf")]
+[node name="Door3" parent="Walls53" instance=ExtResource("4_v0cdt")]
 position = Vector2(-83.000015, -314)
 rotation = 1.5707964
 
 [node name="Interactable" parent="Walls53/Door3" index="0"]
 TYPE = 2
 
-[node name="Door4" parent="Walls53" instance=ExtResource("3_37qvf")]
+[node name="Door4" parent="Walls53" instance=ExtResource("4_v0cdt")]
 position = Vector2(98.999985, -236)
 rotation = 1.5707964
 
 [node name="Interactable" parent="Walls53/Door4" index="0"]
 TYPE = 3
 
-[node name="Door5" parent="Walls53" instance=ExtResource("3_37qvf")]
+[node name="Door5" parent="Walls53" instance=ExtResource("4_v0cdt")]
 position = Vector2(143.99997, -684)
 rotation = 1.5707964
 
 [node name="Interactable" parent="Walls53/Door5" index="0"]
 TYPE = 4
 
-[node name="Walls54" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls54" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(444, 272)
 rotation = 1.5707964
 
@@ -271,7 +271,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls54" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls55" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls55" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(409, 125)
 rotation = 1.5707964
 
@@ -281,7 +281,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls55" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls58" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls58" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(445, 125)
 rotation = 1.5707964
 
@@ -291,7 +291,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls58" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls56" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls56" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(320, 125)
 rotation = 1.5707964
 
@@ -301,7 +301,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls56" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls57" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls57" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(230, 125)
 rotation = 1.5707964
 
@@ -311,7 +311,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls57" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls50" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls50" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(485, 232)
 
 [node name="CollisionShape2D" parent="Walls50" index="0"]
@@ -320,7 +320,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls50" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls47" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls47" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(180, 164)
 
 [node name="CollisionShape2D" parent="Walls47" index="0"]
@@ -329,7 +329,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls47" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls49" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls49" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(485, 164)
 
 [node name="CollisionShape2D" parent="Walls49" index="0"]
@@ -338,7 +338,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls49" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls12" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls12" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(112, 203)
 
 [node name="CollisionShape2D" parent="Walls12" index="0"]
@@ -347,7 +347,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls12" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls16" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls16" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(112, 114)
 
 [node name="CollisionShape2D" parent="Walls16" index="0"]
@@ -356,7 +356,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls16" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls17" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls17" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(152, 64)
 rotation = 1.5707964
 
@@ -366,7 +366,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls17" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls18" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls18" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(242, 64)
 rotation = 1.5707964
 
@@ -376,7 +376,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls18" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls19" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls19" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(332, 64)
 rotation = 1.5707964
 
@@ -386,7 +386,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls19" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls20" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls20" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(422, 64)
 rotation = 1.5707964
 
@@ -396,7 +396,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls20" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls21" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls21" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(512, 64)
 rotation = 1.5707964
 
@@ -406,7 +406,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls21" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls22" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls22" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(551, 80)
 
 [node name="CollisionShape2D" parent="Walls22" index="0"]
@@ -415,7 +415,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls22" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls23" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls23" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(601, 119)
 rotation = 1.5707964
 
@@ -425,7 +425,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls23" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls24" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls24" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(601, 185)
 rotation = 1.5707964
 
@@ -435,7 +435,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls24" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls25" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls25" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(640, 69)
 
 [node name="CollisionShape2D" parent="Walls25" index="0"]
@@ -444,7 +444,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls25" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls26" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls26" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(728, 69)
 
 [node name="CollisionShape2D" parent="Walls26" index="0"]
@@ -453,7 +453,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls26" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls27" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls27" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(684, 20)
 rotation = 1.5707964
 
@@ -463,7 +463,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls27" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls28" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls28" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(728, 159)
 
 [node name="CollisionShape2D" parent="Walls28" index="0"]
@@ -472,7 +472,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls28" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls29" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls29" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(728, 249)
 
 [node name="CollisionShape2D" parent="Walls29" index="0"]
@@ -481,7 +481,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls29" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls30" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls30" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(728, 338)
 
 [node name="CollisionShape2D" parent="Walls30" index="0"]
@@ -490,7 +490,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls30" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls31" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls31" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(640, 235)
 
 [node name="CollisionShape2D" parent="Walls31" index="0"]
@@ -499,7 +499,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls31" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls32" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls32" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(640, 325)
 
 [node name="CollisionShape2D" parent="Walls32" index="0"]
@@ -508,7 +508,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls32" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls33" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls33" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(640, 414)
 
 [node name="CollisionShape2D" parent="Walls33" index="0"]
@@ -517,7 +517,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls33" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls34" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls34" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(640, 504)
 
 [node name="CollisionShape2D" parent="Walls34" index="0"]
@@ -526,7 +526,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls34" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls35" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls35" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(778, 377)
 rotation = 1.5707964
 
@@ -536,7 +536,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls35" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls36" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls36" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(778, 452)
 rotation = 1.5707964
 
@@ -546,7 +546,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls36" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls37" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls37" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(728, 492)
 
 [node name="CollisionShape2D" parent="Walls37" index="0"]
@@ -555,7 +555,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls37" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls38" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls38" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(686, 542)
 rotation = 1.5707964
 
@@ -565,7 +565,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls38" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls39" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls39" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(868, 452)
 rotation = 1.5707964
 
@@ -575,7 +575,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls39" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls40" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls40" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(868, 377)
 rotation = 1.5707964
 
@@ -585,7 +585,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls40" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls41" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls41" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(958, 377)
 rotation = 1.5707964
 
@@ -595,7 +595,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls41" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls42" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls42" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(1048, 377)
 rotation = 1.5707964
 
@@ -605,7 +605,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls42" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls43" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls43" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(958, 452)
 rotation = 1.5707964
 
@@ -615,7 +615,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls43" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls44" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls44" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(1048, 452)
 rotation = 1.5707964
 
@@ -625,7 +625,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls44" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls45" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls45" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(1098, 415)
 
 [node name="CollisionShape2D" parent="Walls45" index="0"]
@@ -634,7 +634,7 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls45" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Walls2" parent="." instance=ExtResource("2_ox6ny")]
+[node name="Walls2" parent="." instance=ExtResource("3_s8qm7")]
 position = Vector2(332, 610)
 rotation = 1.5707964
 
@@ -644,20 +644,20 @@ shape = SubResource("RectangleShape2D_ox6ny")
 [node name="Interactable" parent="Walls2" index="1"]
 DIALOGUE = Array[String]([])
 
-[node name="Door" parent="." instance=ExtResource("3_37qvf")]
+[node name="Door" parent="." instance=ExtResource("4_v0cdt")]
 position = Vector2(297, 501)
 
 [node name="Interactable" parent="Door" index="0"]
 DIALOGUE = Array[String](["Leave me alone smh", "No seriously Jeremy leave"])
-TYPE = 2
+TYPE = 4
 
-[node name="Door2" parent="." instance=ExtResource("3_37qvf")]
+[node name="Door2" parent="." instance=ExtResource("4_v0cdt")]
 position = Vector2(366, 381)
 
 [node name="Interactable" parent="Door2" index="0"]
 TYPE = 2
 
-[node name="Object" parent="." instance=ExtResource("5_5x5jl")]
+[node name="Object" parent="." instance=ExtResource("5_j4m2s")]
 position = Vector2(487, 303)
 rotation = 0.2443461
 
@@ -671,7 +671,7 @@ shape = SubResource("RectangleShape2D_n0usu")
 [node name="CollisionShape2D" parent="Object" index="1"]
 shape = SubResource("RectangleShape2D_5x5jl")
 
-[node name="Object2" parent="." instance=ExtResource("5_5x5jl")]
+[node name="Object2" parent="." instance=ExtResource("5_j4m2s")]
 position = Vector2(518, 267)
 rotation = -0.36651915
 
@@ -687,7 +687,7 @@ shape = SubResource("RectangleShape2D_02xo5")
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_hbv11")
 
-[node name="Object3" parent="." instance=ExtResource("5_5x5jl")]
+[node name="Object3" parent="." instance=ExtResource("5_j4m2s")]
 position = Vector2(124, 101)
 
 [node name="Interactable" parent="Object3" index="0"]
@@ -699,7 +699,7 @@ shape = SubResource("RectangleShape2D_plbul")
 [node name="CollisionShape2D" parent="Object3" index="1"]
 shape = SubResource("RectangleShape2D_soyae")
 
-[node name="Object4" parent="." instance=ExtResource("5_5x5jl")]
+[node name="Object4" parent="." instance=ExtResource("5_j4m2s")]
 position = Vector2(145, 78)
 rotation = 1.5707964
 
@@ -712,7 +712,7 @@ shape = SubResource("RectangleShape2D_ja6he")
 [node name="CollisionShape2D" parent="Object4" index="1"]
 shape = SubResource("RectangleShape2D_igope")
 
-[node name="Object5" parent="." instance=ExtResource("5_5x5jl")]
+[node name="Object5" parent="." instance=ExtResource("5_j4m2s")]
 position = Vector2(668, 48)
 rotation = 0.7766715
 
@@ -725,7 +725,7 @@ shape = SubResource("RectangleShape2D_4cxwe")
 [node name="CollisionShape2D" parent="Object5" index="1"]
 shape = SubResource("RectangleShape2D_dw11p")
 
-[node name="Object6" parent="." instance=ExtResource("5_5x5jl")]
+[node name="Object6" parent="." instance=ExtResource("5_j4m2s")]
 position = Vector2(661, 510)
 scale = Vector2(0.8, 0.8)
 
@@ -739,7 +739,7 @@ shape = SubResource("RectangleShape2D_ok6jp")
 [node name="CollisionShape2D" parent="Object6" index="1"]
 shape = SubResource("RectangleShape2D_6a7e7")
 
-[node name="Object7" parent="." instance=ExtResource("5_5x5jl")]
+[node name="Object7" parent="." instance=ExtResource("5_j4m2s")]
 position = Vector2(709, 510)
 scale = Vector2(0.6, 0.6)
 
@@ -771,7 +771,7 @@ offset_right = 190.0
 offset_bottom = -28.0
 grow_vertical = 0
 pivot_offset = Vector2(77.5, 77.5)
-texture = ExtResource("4_hh0lw")
+texture = ExtResource("6_tyw8b")
 
 [node name="HintLabel" type="Label" parent="CanvasLayer"]
 visible = false
@@ -804,7 +804,7 @@ grow_vertical = 2
 pivot_offset = Vector2(0.5, 14.5)
 label_settings = SubResource("LabelSettings_soyae")
 
-[node name="Dialogue" parent="." instance=ExtResource("8_soyae")]
+[node name="Dialogue" parent="." instance=ExtResource("8_3ek8a")]
 labelPath = NodePath("../CanvasLayer/DialogueLabel")
 
 [editable path="Walls"]
